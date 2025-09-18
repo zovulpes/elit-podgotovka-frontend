@@ -1,0 +1,7 @@
+def is_anagram(s, t):
+    return sorted(s) == sorted(t)
+
+s = input("Введите s: ").strip()
+t = input("Введите t: ").strip()
+
+print("true" if is_anagram(s, t) else "false")
