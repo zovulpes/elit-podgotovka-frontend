@@ -1,0 +1,18 @@
+# задание 1
+
+s = input()
+stack = list()
+dictionary = {')': '(', ']': '[', '}': '{'}
+
+for char in range(len(s)):
+    if s[char] in "([{":
+        stack.append(s[char])
+
+    elif s[char] in "])}":
+        if not stack or stack[-1] != dictionary[s[char]]:
+            print("false")
+            break
+        else:
+            stack.pop() 
+else:
+    print("true")
